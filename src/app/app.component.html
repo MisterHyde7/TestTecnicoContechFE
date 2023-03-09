@@ -1,0 +1,13 @@
+<mat-drawer-container class="container">
+  <mat-drawer mode="side" opened class="sidebar">
+    <div [routerLink]="'/home-page.component'">
+      <mat-icon class="margin-top-10 margin-left-10 mat-primary" aria-hidden="false" aria-label="Fatture" fontIcon="receipt_long"></mat-icon><b class="test">Fatture</b>
+    </div>
+    <div [routerLink]="'/prodotti.component'">
+      <mat-icon class="margin-top-10 margin-left-10 mat-primary" aria-hidden="false" aria-label="Prodotti" fontIcon="sell"></mat-icon><b>Prodotti</b>
+    </div>
+  </mat-drawer>
+  <mat-drawer-content>
+    <router-outlet></router-outlet>
+  </mat-drawer-content>
+</mat-drawer-container>

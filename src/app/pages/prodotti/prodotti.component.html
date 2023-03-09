@@ -1,0 +1,31 @@
+<table mat-table [dataSource]="listaProdotti" class="mat-elevation-z8">
+
+  <ng-container matColumnDef="position">
+    <th mat-header-cell *matHeaderCellDef> No. </th>
+    <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+  </ng-container>
+
+  <!-- Descrizione Column -->
+  <ng-container matColumnDef="descrizione">
+    <th mat-header-cell *matHeaderCellDef> Descrizione </th>
+    <td mat-cell *matCellDef="let element"> {{element.descrizione}} </td>
+  </ng-container>
+
+  <!-- Prezzo prodotto Column -->
+  <ng-container matColumnDef="prezzo">
+    <th mat-header-cell *matHeaderCellDef> Prezzo </th>
+    <td mat-cell *matCellDef="let element"> {{element.prezzo}} </td>
+  </ng-container>
+
+  <!-- Azioni Column -->
+  <ng-container matColumnDef="symbol">
+    <th mat-header-cell *matHeaderCellDef> Azioni </th>
+    <td mat-cell *matCellDef="let element">
+      <mat-icon class="margin-left-10 mat-primary" aria-hidden="false" aria-label="Edit" fontIcon="edit" (click)="openDialog(element)"></mat-icon>
+      <mat-icon class="margin-left-10 mat-warn" aria-hidden="false" aria-label="Delete" fontIcon="delete"></mat-icon>
+    </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>

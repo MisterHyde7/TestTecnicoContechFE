@@ -1,0 +1,15 @@
+<h1 mat-dialog-title>Modifica prodotto</h1>
+<div mat-dialog-content>
+  <mat-form-field>
+    <mat-label>Descrizione</mat-label>
+    <input matInput type="text" [(ngModel)]="descrizioneCopia">
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Prezzo</mat-label>
+    <input matInput type="number" [(ngModel)]="prezzoCopia">
+  </mat-form-field>
+  <mat-dialog-actions>
+    <button mat-raised-button mat-dialog-close color="primary" (click)="salvaModificaProdotto(data.prodotto)">Salva
+    </button>
+  </mat-dialog-actions>
+</div>
